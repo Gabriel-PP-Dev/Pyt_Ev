@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Miembros</title>
+</head>
+<body>
+    <h1>Lista de Miembros</h1>
+    <a href="{% url 'miembro_create' %}">Crear Nuevo Miembro</a>
+    <ul>
+        {% for miembro in miembros %}
+            <li>
+                {{ miembro.nombre }} - {{ miembro.CI }} ({{ miembro.telefono }})
+                <a href="{% url 'miembro_update' miembro.id_miembro %}">Editar</a>
+                <a href="{% url 'miembro_delete' miembro.id_miembro %}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
