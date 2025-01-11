@@ -1,0 +1,3 @@
+django == 5.1.4
+posgresSQL == 16
+Python == 3.13.1

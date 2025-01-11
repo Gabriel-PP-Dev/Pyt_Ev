@@ -8,6 +8,9 @@ def libro_list(request):
     libros = Libro.objects.all()
     return render(request, 'libro_list.html', {'libros': libros})
 
+def index(request):
+    return render(request, 'index.html')
+
 def libro_create(request):
     if request.method == 'POST':
         form = LibroForm(request.POST)
